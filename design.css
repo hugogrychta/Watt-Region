@@ -109,12 +109,12 @@ h1 {
 
 #region area{
 
-	  opacity: 0.3;
+	opacity: 0.3;
 }
 
-#region area :hover{
+#region area:hover{
 
-	  opacity: 4;
+	opacity: 4;
 }
 
 #compte form {
