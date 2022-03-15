@@ -61,8 +61,6 @@
 			
 			<br>
 			
-			<input type="button" onclick="changepage(-1)" value="Précédent" class="prevparcourir">
-			<input type="button" onclick="changepage(1)" value="Suivant" class="nextparcourir">
 		</div>
 		<div class="section" id="notifications">
 			<h3>Espace notifications</h3>
