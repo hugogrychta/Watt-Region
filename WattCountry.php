@@ -8,10 +8,6 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
-<<<<<<< Updated upstream
-	
-=======
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -37,6 +33,9 @@
 				Les détails du fonctionnement de la plateforme est disponible dans les mentions légales.</p><br>
 				<h3>La carte interactive</h3>
 			<p id="selection">Les Régions de France</p>
+
+			<div class="hover-title">Survolez ce texte !</div>
+			<div class="hover-image"><img src="Heat.png"></div>
 
 				
 			<div id="region">
