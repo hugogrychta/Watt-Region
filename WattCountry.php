@@ -53,8 +53,6 @@
 				</map>
 			</div>
 			
-			<input type="button" value="Précédent" class="prev">
-			<input type="button" value="Suivant" class="next">
 		</div>
 
 		<div class="section" id="parcourir">
