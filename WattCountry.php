@@ -6,8 +6,11 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="CarteFrance.css">
+	<link rel="icon" type="image/png" sizes="10x10" href="Heat.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+	<div class="hover-title">Survolez ce texte</div>
+			<div class="hover-image"><img src="Heat.png"></div>
 </head>
 
 <body>
@@ -32,6 +35,10 @@
 				Sur WattRegion vous pourrez vous informez sur la consommation en électricté de chaque région de France en temps et en heure.
 				Les détails du fonctionnement de la plateforme est disponible dans les mentions légales.</p><br>
 			<p id="selection">Les Régions de France</p>
+
+			<div class="hover-title">Survolez ce texte ! 🏞</div>
+			<div class="hover-image"><img src="Heat.png"></div>
+
 
 			<div id="region">
 				<img src="carte-france-regions.png" usemap="#image-map">
