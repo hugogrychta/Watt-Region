@@ -6,11 +6,9 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-	<link rel="stylesheet" type="text/css" href="CarteFrance.css">
-	<link rel="icon" type="image/png" sizes="10x10" href="Heat.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<div class="hover-title">Survolez ce texte</div>
-			<div class="hover-image"><img src="Heat.png"></div>
+	
+	
 </head>
 
 <body>
@@ -34,12 +32,10 @@
 			<p>Bienvenue sur notre plateforme interactive en ligne WattRegion. <br>
 				Sur WattRegion vous pourrez vous informez sur la consommation en électricté de chaque région de France en temps et en heure.
 				Les détails du fonctionnement de la plateforme est disponible dans les mentions légales.</p><br>
+				<h3>La carte interactive</h3>
 			<p id="selection">Les Régions de France</p>
 
-			<div class="hover-title">Survolez ce texte ! 🏞</div>
-			<div class="hover-image"><img src="Heat.png"></div>
-
-
+				
 			<div id="region">
 				<img src="carte-france-regions.png" usemap="#image-map">
 
@@ -59,16 +55,12 @@
 				    <area target="" alt="Corse" title="Corse" href="" coords="449,415,450,402,454,417,458,438,454,448,454,464,450,475,436,469,441,463,433,462,434,452,426,443,432,436,426,431,439,418" shape="poly">
 				</map>
 			</div>
+
+			
 			
 		</div>
 
-		<div class="section" id="parcourir">
-			<h3>La carte interactive</h3>
-			<br>
-			
-			<br>
-			
-		</div>
+		
 		<div class="section" id="notifications">
 			<h3>Espace notifications</h3>
 			<?php
