@@ -34,16 +34,54 @@
 				<h3>La carte interactive</h3>
 			<p id="selection">Les Régions de France</p>
 
-			<div class="hover-title">Survolez ce texte !</div>
-			<div class="hover-image"><img src="Heat.png"></div>
+			
 
-				
 			<div id="region">
 				<img src="carte-france-regions.png" usemap="#image-map">
 
 				<map name="image-map">
-				    <area target="" alt="Normandie" title="Normandie" href="" coords="211,177,200,172,197,164,187,167,179,159,165,163,150,159,141,161,137,127,131,116,128,100,144,103,150,120,164,120,179,124,189,121,197,117,190,111,197,103,215,96,224,92,232,88,244,102,242,117,244,126,238,134,235,142,229,149,215,152,216,161,216,168" shape="poly">
-				    <area target="" alt="Bretagne" title="Bretagne" href="" coords="136,155,109,153,101,158,86,142,74,141,73,147,49,147,35,153,36,161,49,157,53,166,42,164,49,171,36,175,46,185,54,181,61,186,74,190,85,199,95,201,105,206,117,204,123,197,130,197,139,192,145,195,151,185,152,160" shape="poly">
+
+
+<style type="text/css">
+.pop { POSITION: absolute; VISIBILITY: hidden }
+</style>
+
+
+
+<DIV class=pop id=img></DIV>
+<SCRIPT type="text/javascript">
+if (document.getElementById){
+box = document.getElementById("img").style;
+if(navigator.appName.substring(0,3) == "Net")
+document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove = pointer;
+}
+function poplink(contenu){
+var content ="<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=#000000><TR><TD> <TABLE WIDTH=1 CELLPADDING=3 CELLSPACING=1><TR><TD BGCOLOR=#FFFFFF><CENTER>"+contenu+"</CENTER></TD></TR></TABLE></TD></TR></TABLE>";
+if (document.getElementById)
+{
+document.getElementById("img").innerHTML =
+content;
+box.visibility = "visible";
+}
+}
+function pointer(e)
+{
+var x = (navigator.appName.substring(0,3) == "Net") ? e.pageX : event.x+document.body.scrollLeft;
+var y = (navigator.appName.substring(0,3) == "Net") ? e.pageY : event.y+document.body.scrollTop;
+box.left = x+100;
+box.top = y-100;
+}
+function closepopup()
+{
+if (document.getElementById)
+box.visibility = "hidden";
+}
+</SCRIPT>
+
+				    <area target="" alt="Normandie" title="Normandie" href="" onMouseOver="poplink('<img src=Heat.png> ')"; onmouseout="closepopup()" coords="211,177,200,172,197,164,187,167,179,159,165,163,150,159,141,161,137,127,131,116,128,100,144,103,150,120,164,120,179,124,189,121,197,117,190,111,197,103,215,96,224,92,232,88,244,102,242,117,244,126,238,134,235,142,229,149,215,152,216,161,216,168" shape="poly">
+
+				    <area target="" alt="Bretagne" title="Bretagne" href="" onMouseOver="poplink('<img src=Energie.png> ')"; onmouseout="closepopup()" coords="136,155,109,153,101,158,86,142,74,141,73,147,49,147,35,153,36,161,49,157,53,166,42,164,49,171,36,175,46,185,54,181,61,186,74,190,85,199,95,201,105,206,117,204,123,197,130,197,139,192,145,195,151,185,152,160" shape="poly">
 				    <area target="" alt="Pays de la Loire" title="Pays de la Loire" href="" coords="117,204,103,212,108,218,118,217,113,224,119,229,114,239,123,254,139,265,148,266,158,266,165,262,159,242,156,234,165,232,183,229,193,206,208,197,212,185,212,176,200,172,197,164,187,166,180,159,166,162,152,159,151,183,145,194,137,192,130,196,122,196" shape="poly">
 				    <area target="" alt="Nouvelle Aquitaine" title="Nouvelle Aquitaine" href="" coords="166,262,157,238,163,233,169,229,180,229,188,226,194,235,205,236,214,254,223,264,260,263,270,283,263,292,267,312,252,331,242,334,231,330,215,352,217,362,203,376,172,382,169,398,179,409,166,432,152,427,133,421,132,413,121,408,135,379,140,347,147,343,141,336,145,306,156,317,160,311,142,293,148,282,145,269,157,264" shape="poly">
 				    <area target="" alt="Occitane" title="Occitane" href="" coords="168,433,198,441,202,433,242,448,250,456,269,457,287,451,286,426,299,413,328,401,340,392,346,377,338,364,326,363,314,343,304,337,295,332,284,344,275,335,266,347,255,347,251,332,241,334,232,329,217,351,217,358,210,374,196,376,186,379,174,382,170,396,179,405,173,421" shape="poly">

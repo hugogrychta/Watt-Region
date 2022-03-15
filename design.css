@@ -133,49 +133,21 @@ h1 {
 	top: 3%;
 }
 
-body {
-background-color: #fff4e4;
+a.imag{
+position: relative;
+z-index: 1;
 }
-
-.hover-title {
-display: inline;
-pointer-events: auto;
-cursor: pointer;
-font-family: helvetica;
-font-size: 24px;
+a.imag:hover{
+cursor: help;
+z-index: 2;
 }
-
-.hover-image {
+a.imag span{
 display: none;
 }
-
-body:not(.mobile) .hover-title:hover + .hover-image {
-display: flex;
-pointer-events: none;
+a.imag:hover span{
+display:block;
+position:absolute;
+z-index: 3;
+top: -155px;
+left: -50px;
 }
-
-.hover-image {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: -1;
-pointer-events: none;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-/* Change width and height to scale images */
-width: 95vw;
-height: 95vh;
-}
-
-.hover-image img {
-max-width: 100% !important;
-max-height: 100% !important;
-width: auto !important;
-height: auto !important;
-margin-bottom: 0;
-}
-
-
- 
