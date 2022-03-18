@@ -21,7 +21,7 @@
 		<div id="navigation">
 			<ul>
 				<li><button class="boutonnav" onclick="changetab(0)"><a href="WattCountry.php">Accueil</a></button></li>
-				<li><button class="boutonnav" onclick="changetab(4)"><a href="inscription.php">Votre compte</a></button></li>
+				<li><button class="boutonnav" onclick="changetab(4)"><a href="connexion.php">Votre compte</a></button></li>
 			</ul>
 		</div>
 		<div class="section" id="accueil">
