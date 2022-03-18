@@ -55,8 +55,10 @@ h1 {
 
 #footer {
 	background-color: black;
-	width: 900px;
-	height: 70px;
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+	position: absolute;
 	font-size: .90em;
 	font-style: italic;
 	color: white;
@@ -109,12 +111,12 @@ h1 {
 
 #region area{
 
-	opacity: 0.3;
+	  opacity: 0.3;
 }
 
-#region area:hover{
+#region area :hover{
 
-	opacity: 4;
+	  opacity: 4;
 }
 
 #compte form {
