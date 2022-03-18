@@ -7,7 +7,19 @@
 	<link rel="stylesheet" type="text/css" href="design.css">
 	<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+	<style type="text/css">
+		#footer {
+			background-color: black;
+			width: 1200px;
+			height: 100px;
+			margin: 0 auto 0 auto;
+			position: absolute;
+			font-size: .90em;
+			font-style: italic;
+			color: white;
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
