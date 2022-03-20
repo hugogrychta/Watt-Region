@@ -121,26 +121,7 @@ box.visibility = "hidden";
 
 			
 			
-		</div>
-
-		
-		<div class="section" id="notifications">
-			<h3>Espace notifications</h3>
-			<?php
-            include 'notification.php';
-            ?>
-		</div>
-
-		<div class="section" id="compte">
-			<h3>Votre compte</h3>
-			<?php
-			include 'formulaire.php' ;
-			include 'dbconnexion.php' ;
-			?>
-		</div>
-		
-
-		
+		</div>		
 		<div id="footer">
 			Copyright &copy; 2022 | WattRegion |
 			<a href="mailto:wattregion@gmail.com">Email </a> |
