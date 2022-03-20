@@ -97,7 +97,7 @@ box.visibility = "hidden";
 
 				    <area target="" alt="Pays de la Loire" title="Pays de la Loire" href="" onMouseOver="poplink('<img src=PaysDeLaLoire.png width=800 height=383>') "; onmouseout="closepopup()" coords="117,204,103,212,108,218,118,217,113,224,119,229,114,239,123,254,139,265,148,266,158,266,165,262,159,242,156,234,165,232,183,229,193,206,208,197,212,185,212,176,200,172,197,164,187,166,180,159,166,162,152,159,151,183,145,194,137,192,130,196,122,196" shape="poly">
 
-				    <area target="" alt="Nouvelle Aquitaine" title="Nouvelle Aquitaine" href="" onMouseOver="poplink('<img src=NouvelleAquitaine.png width=383 height=500>') "; onmouseout="closepopup()" coords="166,262,157,238,163,233,169,229,180,229,188,226,194,235,205,236,214,254,223,264,260,263,270,283,263,292,267,312,252,331,242,334,231,330,215,352,217,362,203,376,172,382,169,398,179,409,166,432,152,427,133,421,132,413,121,408,135,379,140,347,147,343,141,336,145,306,156,317,160,311,142,293,148,282,145,269,157,264" shape="poly">
+				    <area target="" alt="Nouvelle Aquitaine" title="Nouvelle Aquitaine" href="" onMouseOver="poplink('<img src=NouvelleAquitaine.png width=383 height=450>') "; onmouseout="closepopup()" coords="166,262,157,238,163,233,169,229,180,229,188,226,194,235,205,236,214,254,223,264,260,263,270,283,263,292,267,312,252,331,242,334,231,330,215,352,217,362,203,376,172,382,169,398,179,409,166,432,152,427,133,421,132,413,121,408,135,379,140,347,147,343,141,336,145,306,156,317,160,311,142,293,148,282,145,269,157,264" shape="poly">
 
 				    <area target="" alt="Occitane" title="Occitane" href="" onMouseOver="poplink('<img src=Occitanie.png width=800 height=383>') "; onmouseout="closepopup()" coords="168,433,198,441,202,433,242,448,250,456,269,457,287,451,286,426,299,413,328,401,340,392,346,377,338,364,326,363,314,343,304,337,295,332,284,344,275,335,266,347,255,347,251,332,241,334,232,329,217,351,217,358,210,374,196,376,186,379,174,382,170,396,179,405,173,421" shape="poly">
 
@@ -119,8 +119,7 @@ box.visibility = "hidden";
 				</map>
 			</div>
 
-			
-			
+				
 		</div>		
 		<div id="footer">
 			Copyright &copy; 2022 | WattRegion |
