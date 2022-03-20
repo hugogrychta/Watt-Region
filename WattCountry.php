@@ -40,12 +40,10 @@
 			<br>
 			<p>Bienvenue sur notre plateforme interactive en ligne WattRegion. <br>
 				Sur WattRegion vous pourrez vous informez sur la consommation en électricté de chaque région de France en temps et en heure.
-				Les détails du fonctionnement de la plateforme est disponible dans les mentions légales.</p><br>
+				Les détails du fonctionnement de la plateforme est disponible dans les mentions légales.</p>
+				<a href="https://www.rte-france.com/eco2mix/la-production-delectricite-par-filiere" target="_blank"><p> Suivre la production d'électricité en France en temps réel</p></a>
 				<h3>La carte interactive</h3>
 			<p id="selection">Les Régions de France</p>
-
-			
-
 			<div id="region">
 				<img src="carte-france-regions.png" usemap="#image-map">
 
