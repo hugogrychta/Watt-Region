@@ -1,3 +1,9 @@
+<?php session_start();
+	
+       
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,8 +11,9 @@
 	<title>WattRegion</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="design.css">
-	<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+	<link rel="icon" type="image/png" sizes="50x50" href="logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="wattregion.js"></script>
 	<style type="text/css">
 		#footer {
 			background-color: black;
@@ -20,6 +27,7 @@
 			text-align: center;
 		}
 	</style>
+	
 </head>
 
 <body>
@@ -32,8 +40,10 @@
 		</div>
 		<div id="navigation">
 			<ul>
-				<li><button class="boutonnav" onclick="changetab(0)"><a href="WattCountry.php">Accueil</a></button></li>
-				<li><button class="boutonnav" onclick="changetab(4)"><a href="connexion.php">Votre compte</a></button></li>
+				<li><button class="boutonnav" onclick="changetab(0)">Accueil</button></li>
+				<li><button class="boutonnav" onclick="changetab(1)">Tout Parcourir</button></li>
+				<li><button class="boutonnav" onclick="changetab(2)">Notifications</button></li>
+				<li><button class="boutonnav" onclick="changetab(4)">Votre compte</button></li>
 			</ul>
 		</div>
 		<div class="section" id="accueil">
@@ -44,52 +54,52 @@
 				<a href="https://www.rte-france.com/eco2mix/la-production-delectricite-par-filiere" target="_blank"><p> Suivre la production d'électricité en France en temps réel</p></a>
 				<h3>La carte interactive</h3>
 			<p id="selection">Les Régions de France</p>
+
 			<div id="region">
 				<img src="carte-france-regions.png" usemap="#image-map">
 
 				<map name="image-map">
 
-
-<style type="text/css">
-.pop { POSITION: absolute;
-	top: 20px;
-	left: 0px;
- 	VISIBILITY: hidden }
-</style>
-
+				<style type="text/css">
+					.pop { POSITION: absolute;
+						top: 20px;
+						left: 0px;
+					 	VISIBILITY: hidden }
+					</style>
 
 
-<DIV class=pop id=img></DIV>
-<SCRIPT type="text/javascript">
-if (document.getElementById){
-box = document.getElementById("img").style;
-if(navigator.appName.substring(0,3) == "Net")
-document.captureEvents(Event.MOUSEMOVE);
-document.onmousemove = pointer;
-}
-function poplink(contenu){
-var content ="<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=#000000><TR><TD> <TABLE WIDTH=1 CELLPADDING=3 CELLSPACING=1><TR><TD BGCOLOR=#FFFFFF><CENTER>"+contenu+"</CENTER></TD></TR></TABLE></TD></TR></TABLE>";
-if (document.getElementById)
-{
-document.getElementById("img").innerHTML =
-content;
-box.visibility = "visible";
-}
-}
-function pointer(e)
-{
-var x = (navigator.appName.substring(0,3) == "Net") ? e.pageX : event.x+document.body.scrollLeft;
-var y = (navigator.appName.substring(0,3) == "Net") ? e.pageY : event.y+document.body.scrollTop;
-box.left = x+100;
-box.top = y-100;
-}
-function closepopup()
-{
-if (document.getElementById)
-box.visibility = "hidden";
-}
- 	
-</SCRIPT>
+
+					<DIV class=pop id=img></DIV>
+					<SCRIPT type="text/javascript">
+					if (document.getElementById){
+					box = document.getElementById("img").style;
+					if(navigator.appName.substring(0,3) == "Net")
+					document.captureEvents(Event.MOUSEMOVE);
+					document.onmousemove = pointer;
+					}
+					function poplink(contenu){
+					var content ="<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=#000000><TR><TD> <TABLE WIDTH=1 CELLPADDING=3 CELLSPACING=1><TR><TD BGCOLOR=#FFFFFF><CENTER>"+contenu+"</CENTER></TD></TR></TABLE></TD></TR></TABLE>";
+					if (document.getElementById)
+					{
+					document.getElementById("img").innerHTML =
+					content;
+					box.visibility = "visible";
+					}
+					}
+					function pointer(e)
+					{
+					var x = (navigator.appName.substring(0,3) == "Net") ? e.pageX : event.x+document.body.scrollLeft;
+					var y = (navigator.appName.substring(0,3) == "Net") ? e.pageY : event.y+document.body.scrollTop;
+					box.left = x+100;
+					box.top = y-100;
+					}
+					function closepopup()
+					{
+					if (document.getElementById)
+					box.visibility = "hidden";
+					}
+					 	
+				</SCRIPT>
 
 				    <area target="" alt="Normandie" title="Normandie" href="" onMouseOver="poplink('<img src=Normandie.jpeg width=700 height=383> ')"; onmouseout="closepopup()" coords="211,177,200,172,197,164,187,167,179,159,165,163,150,159,141,161,137,127,131,116,128,100,144,103,150,120,164,120,179,124,189,121,197,117,190,111,197,103,215,96,224,92,232,88,244,102,242,117,244,126,238,134,235,142,229,149,215,152,216,161,216,168" shape="poly">
 
@@ -118,9 +128,85 @@ box.visibility = "hidden";
 				    <area target="" alt="Corse" title="Corse" href="" coords="449,415,450,402,454,417,458,438,454,448,454,464,450,475,436,469,441,463,433,462,434,452,426,443,432,436,426,431,439,418" shape="poly">
 				</map>
 			</div>
+		</div>
 
 				
-		</div>		
+		<div class="section" id="parcourir">
+			<h3>Toutes les régions de France</h3>
+			<br>
+			<?php 
+
+			include 'db.php';
+				if ($db_found) {
+
+			$sql="SELECT COUNT(Id) as nbArt FROM regions";
+			 $result = mysqli_query($db_handle, $sql);
+			 $data = mysqli_fetch_assoc($result);
+			 $nbArt = $data['nbArt'];
+			 $parPage = 12;
+			 $nbPage = ceil($nbArt/$parPage);
+
+			if(isset($_GET['p']) && $_GET['p']>0 && $_GET['p']<=$nbPage){
+				$cPage = $_GET['p'];
+			}
+			else{
+				$cPage=1;
+			}
+
+			 $sql = "SELECT * FROM regions LIMIT ".(($cPage-1)*$parPage).",$parPage";
+			 $result = mysqli_query($db_handle, $sql);
+
+			 while ($data = mysqli_fetch_assoc($result)) {
+			 	$j= $data['Id'];
+			 	echo "<a href=\"ficheregion.php?regions=$j\">"."<img src=".$data['Image'].">"."</a>";
+
+			 }
+			echo '<br>';
+			 for($i=1;$i<=$nbPage;$i++){
+			 	if($i==$cPage){
+			 		echo "$i - ";
+			 	}
+			 	else{
+			 		echo "<a href=\"WattRegion.php?p=$i\">$i</a> -";
+			 	}
+			 }
+
+			}
+			else {
+			 echo "Database not found";
+			}
+
+
+			?>
+			<br>
+
+			
+			
+		</div>
+		<div class="section" id="notifications">
+			<h3>Espace notifications</h3>
+			<?php
+            include 'notification.php';
+            ?>
+		</div>
+
+		<div class="section" id="favori">
+
+			
+		</div>
+
+		<div class="section" id="compte">
+			<h3>Votre compte</h3>
+			<?php
+			include 'formulaire.php' ;
+		    include 'dbconnexion.php' ;
+			
+
+			?>
+		</div>
+		
+
+		
 		<div id="footer">
 			Copyright &copy; 2022 | WattRegion |
 			<a href="mailto:wattregion@gmail.com">Email </a> |

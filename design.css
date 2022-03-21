@@ -55,10 +55,8 @@ h1 {
 
 #footer {
 	background-color: black;
-	width: 1200px;
-	height: 100px;
-	margin: 0 auto 0 auto;
-	position: absolute;
+	width: 900px;
+	height: 70px;
 	font-size: .90em;
 	font-style: italic;
 	color: white;
@@ -135,21 +133,38 @@ h1 {
 	top: 3%;
 }
 
-a.imag{
-position: relative;
-z-index: 1;
+
+ }
+
+ .product{
+	width: 680px;
+	height: 680px;
+	clear: both;
+	background-color: #C0C0C0;
+	margin: 0 auto;
+	text-align: center;
+	font-family: Georgia, sans-serif;
+	border-radius: 4px;
 }
-a.imag:hover{
-cursor: help;
-z-index: 2;
+
+ .product img{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin-right: 450px;
+	margin-top: 45px;
 }
-a.imag span{
-display: none;
+.produit{
+	table-layout: fixed;
+	width: 400px;
 }
-a.imag:hover span{
-display:block;
-position:absolute;
-z-index: 3;
-top: -155px;
-left: -50px;
+
+
+.profil img{
+	position: relative;
+	width: 20%;
+	height: 20%;
+	margin-right: 450px;
+	margin-top: 45px;
+	left: 33%;
 }

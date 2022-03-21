@@ -1,12 +1,12 @@
-<!DOCTYPE html>
 <html>
 
 <head>
 	<title>WattRegion</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="design.css">
-	<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+	<link rel="icon" type="image/png" sizes="50x50" href="logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="wattregion.js"></script>
 	<style type="text/css">
 		#footer {
 			background-color: black;
@@ -33,73 +33,53 @@
 		</div>
 		<div id="navigation">
 			<ul>
-				<li><button class="boutonnav" onclick="changetab(0)"><a href="WattCountry.php">Accueil</a></button></li>
-				<li><button class="boutonnav" onclick="changetab(4)"><a href="connexion.php">Votre compte</a></button></li>
+				<li><button class="boutonnav" onclick="changetab(0)">Accueil</button></li>
+				<li><button class="boutonnav" onclick="changetab(1)">Tout Parcourir</button></li>
+				<li><button class="boutonnav" onclick="changetab(2)">Notifications</button></li>
+				<li><button class="boutonnav" onclick="changetab(4)">Votre compte</button></li>
 			</ul>
+			
 		</div>
-		<div class="section" id="accueil">
-			<br>
-			<p>Bienvenue sur notre plateforme interactive en ligne WattRegion. <br>
-				Sur WattRegion vous pourrez vous informez sur la consommation en électricté de chaque région de France en temps et en heure.
-			Les détails du fonctionnement de la plateforme est disponible dans les mentions légales.</p><br>
-			<h3>Remplir le formulaire d'inscription</h3>
-			<div id="region">
-				<form action="inscription.php" method="post">
-					<table>
 
-						<tr>
-							<td>Nom :</td>
-							<td><input class="champs" type="text" id="nom" name="nom"></td>
-						</tr>
-						<tr>
-							<td>Prénom :</td>
-							<td><input class="champs" type="text" id="prenom" name="prenom"></td>
-						</tr>
-						<tr>
-							<td>E-mail :</td>
-							<td><input class="champs" type="text" id="email" name="email"></td>
-						</tr>
-						<tr>
-							<td>Mot de passe :</td>
-							<td><input class="champs" type="password" id="mdp" name="mdp"></td>
-						</tr>
-						<tr>
-							<td>N° Téléphone :</td>
-							<td><input class="champs" type="number" id="telephone" name="telephone"></td>
-						</tr>
-						<tr>
-							<td>Adresse :</td>
-							<td><input class="champs" type="text" id="adresse" name="adresse"></td>
-						</tr>
-						<tr>
-							<td>Ville :</td>
-							<td><input class="champs" type="text" id="ville" name="ville"></td>
-						</tr>
-						<tr>
-							<td>Code Postal :</td>
-							<td><input class="champs" type="number" id="codepostal" name="codepostal"></td>
-						</tr>
-						<tr>
-							<td><input type="radio" id="accepte"></td>
-							<td>J'accepte les conditions de confidentialité :</td>
+		<div class="section" id="compte">
+			<h3>Votre compte</h3>
 
-						</tr>
+<form  action="inscription.php" method="post">
+				<table>
+					
+					<tr>
+                            <td>Photo:</td>
+                            <td><input type="hidden" name="MAX_FILE_SIZE" value="250000" />
+							<input type="file" name="fic" size=50 /></td>
+					</tr>
+					<tr>
+						<td>Nom</td>
+						<td><input type="text" name="nom" required></td>
+					</tr>
 
-						<tr>
-							<td colspan="2" align="center">
-								<input type="submit" value="Valider" name="Valider" onclick="validate()">
-							</td>
-						</tr>
-					</table>
-				</form>
-			</div>
-		</div>
-		<div id="footer">
-			Copyright &copy; 2022 | WattRegion |
-			<a href="mailto:wattregion@gmail.com">Email </a> |
-			<a href="https://www.google.com/maps/place/ECE+Paris+Lyon/@48.8518829,2.286998,15z/data=!4m2!3m1!1s0x0:0x167f5a60fb94aa76?sa=X&ved=2ahUKEwjvqr-k9vTwAhXCyIUKHT4eCzsQ_BIwFHoECEYQBQ"> Adresse postale</a> | <a href="#"> Téléphone</a> | <a href="https://www.ece.fr/ecole-ingenieur/mentions-legales/"> Mentions légales</a>
+					<tr>
+						<td>Email</td>
+						<td><input type="text" name="email" required></td>
+					</tr>
+
+					<tr>
+						<td>Mdp</td>
+						<td><input type="text" name="mdp" required></td>
+					</tr>
+					
+					
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="S'inscrire" name="S'inscrire">
+						</td>
+						
+					</tr>
+				</table>
+			</form>
 		</div>
 	</div>
-</body>
 
+        
 </html>
+
+
